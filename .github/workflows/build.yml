@@ -8,7 +8,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+        node-version: [10.x, 12.x, 14.x]
 
     steps:
       - uses: actions/checkout@v2
@@ -21,6 +21,5 @@ jobs:
       - run: npm install
 
       - run: npm run build
-      #
-      # tests currently broken:
-      # - run: npm test
+
+      - run: npm test
